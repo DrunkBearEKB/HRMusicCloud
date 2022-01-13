@@ -1,0 +1,182 @@
+{% extends "base.html" %}
+{% block style_sheet %}
+<link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/style_api.css') }}">
+{% endblock %}
+{% block content %}
+<div class="div-main-api">
+    <div class="div-main-api-text">
+        <p class="p-main-item" style="font-size: 300%; text-align: left;">
+            WEB API
+        </p>
+        <p>
+            Based on simple
+            <a class="a-main-item" href="http://en.wikipedia.org/wiki/Representational_state_transfer"
+                style="padding: 0; text-align: center;" target="_blank">
+                <em>REST</em></a>
+            principles, the HRMusicCloud Web API endpoints
+            return JSON metadata about music artists, albums, and tracks,
+            directly from the HRMusicCloud Data Catalogue.
+        </p>
+    </div>
+    <div class="div-main-api-text">
+        <p class="p-main-item" style="font-size: 200%; text-align: left;">
+            <strong>Requests</strong>
+        </p>
+        <p>
+            The HRMusicCloud Web API is based on
+            <a class="a-main-item" href="http://en.wikipedia.org/wiki/Representational_state_transfer"
+                style="padding: 0; text-align: center;" target="_blank">
+                <em>REST</em></a>
+            principles.
+            Data resources are accessed via standard  requests in UTF-8
+            <a class="a-main-item" href="https://en.wikipedia.org/wiki/HTTPS"
+                style="padding: 0; text-align: center;" target="_blank">
+                <em>HTTPS</em></a>
+            format to an API endpoint. Where possible, Web API uses
+            appropriate
+            <a class="a-main-item" href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol"
+                style="padding: 0; text-align: center;" target="_blank">
+                <em>HTTP</em></a>
+            verbs for each action:
+        </p>
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 15%;">METHOD</th>
+                    <th>ACTION</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>GET</td>
+                    <td>Retrieves resources</td>
+                </tr>
+                <tr>
+                    <td>POST</td>
+                    <td>Creates resources</td>
+                </tr>
+                <tr>
+                    <td>PUT</td>
+                    <td>Changes and/or replaces resources or collections</td>
+                </tr>
+                <tr>
+                    <td>DELETE</td>
+                    <td>Deletes resources</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="div-main-api-text">
+        <p class="p-main-item" style="font-size: 200%; text-align: left;">
+            <strong>Responses</strong>
+        </p>
+        <p>Web API returns all response data as a JSON object.</p>
+    </div>
+    <div class="div-main-api-text">
+        <p class="p-main-item" style="font-size: 200%; text-align: left;">
+            <strong>Response Status Codes</strong>
+        </p>
+        <p>
+            Web API uses the following response status codes, as defined in the
+            <a class="a-main-item" href="https://www.ietf.org/rfc/rfc2616.txt"
+                style="padding: 0; text-align: center;" target="_blank">
+                <em>RFC 2616</em></a>
+            and
+            <a class="a-main-item" href="https://www.ietf.org/rfc/rfc6585.txt"
+                style="padding: 0; text-align: center;" target="_blank">
+                <em>RFC 6585</em></a>:
+        </p>
+        <table>
+            <thead>
+                <tr>
+                    <th>STATUS CODE</th>
+                    <th>DESCRIPTION</th></tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>201</td>
+                <td>Created - The request has been fulfilled and resulted in a new
+                    resource being created.
+                </td>
+            </tr>
+            <tr>
+                <td>202</td>
+                <td>Accepted - The request has been accepted for processing, but
+                    the processing has not been completed.
+                </td>
+            </tr>
+            <tr>
+                <td>204</td>
+                <td>No Content - The request has succeeded but returns no message
+                    body.
+                </td>
+            </tr>
+            <tr>
+                <td>304</td>
+                <td>Not Modified.</a>
+                </td>
+            </tr>
+            <tr>
+                <td>200</td>
+                <td>OK - The request has succeeded. The client can read the result
+                    of the request in the body and the headers of the response.
+                </td>
+            </tr>
+            <tr>
+                <td>400</td>
+                <td>Bad Request - The request could not be understood by the server
+                    due to malformed syntax. The message body will contain more
+                    information.
+                </td>
+            </tr>
+            <tr>
+                <td>401</td>
+                <td>Unauthorized - The request requires user authentication or, if
+                    the request included authorization credentials, authorization
+                    has been refused for those credentials.
+                </td>
+            </tr>
+            <tr>
+                <td>403</td>
+                <td>Forbidden - The server understood the request, but is refusing
+                    to fulfill it.
+                </td>
+            </tr>
+            <tr>
+                <td>404</td>
+                <td>Not Found - The requested resource could not be found. This
+                    error can be due to a temporary or permanent condition.
+                </td>
+            </tr>
+            <tr>
+                <td>429</td>
+                <td>Too Many Requests - Rate limiting has been applied.
+                </td>
+            </tr>
+            <tr>
+                <td>500</td>
+                <td>Internal Server Error. You should never receive this error
+                    because our clever coders catch them all … but if you are
+                    unlucky enough to get one, please report it to us through a
+                    comment at the bottom of this page.
+                </td>
+            </tr>
+            <tr>
+                <td>502</td>
+                <td>Bad Gateway - The server was acting as a gateway or proxy and
+                    received an invalid response from the upstream server.
+                </td>
+            </tr>
+            <tr>
+                <td>503</td>
+                <td>Service Unavailable - The server is currently unable to handle
+                    the request due to a temporary condition which will be
+                    alleviated after some delay. You can choose to resend the
+                    request again.
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

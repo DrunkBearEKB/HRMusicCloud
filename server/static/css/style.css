@@ -1,0 +1,143 @@
+html, body {
+    background-color: #000000;
+    font-family: Consolas, monaco, monospace;
+    color: #ffffff;
+    overflow-x: hidden;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+.div-header {
+    height: 7%;
+    padding: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 20px;
+}
+.div-header-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.div-header-right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.img-header-logo {
+    max-width: 35px;
+    max-height: 35px;
+    padding: 10px;
+}
+.p-header-item {
+    color: #ffffff;
+    padding: 10px;
+}
+.a-header-item {
+    color: #ffffff;
+    padding: 10px;
+    text-decoration: none;
+}
+.a-header-item:hover {
+    color: #ffffff;
+    padding: 10px;
+    text-decoration: none;
+    border-bottom: 1px solid #ffffff;
+}
+.div-main {
+    width: 100%;
+    min-height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.light-1 {
+    position: absolute;
+    right: 40%;
+    top: 30%;
+	height: 0;
+	width: 40%;
+	padding-top: 40%;
+	border-radius: 50%;
+	background: radial-gradient(circle, #181224, #000000);
+	transition: scale 5s linear;
+	box-shadow: 0px 0px 5% 0px #000000;
+	animation: rotate-1 20s infinite linear;
+}
+.light-2 {
+    position: absolute;
+    right: 50%;
+    top: 35%;
+	height: 0;
+	width: 35%;
+	padding-top: 35%;
+	border-radius: 50%;
+	background: radial-gradient(circle, #282234, #000000);
+	transition: scale 5s linear;
+	box-shadow: 0px 0px 5% 0px #000000;
+	animation: rotate-2 20s infinite linear;
+}
+.light-3 {
+    position: absolute;
+    right: 50%;
+    top: 30%;
+	height: 0;
+	width: 30%;
+	padding-top: 30%;
+	border-radius: 50%;
+	background: radial-gradient(circle, #383244, #000000);
+	transition: scale 5s linear;
+	box-shadow: 0px 0px 5% 0px #000000;
+	animation: rotate-3 20s infinite linear;
+}
+.div-main-text {
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 10%;
+    padding-bottom: 15%;
+    min-height: 100%;
+}
+.p-main-item {
+    /*padding: 1%;*/
+}
+.a-main-item {
+    color: #ffffff;
+    padding: 10px;
+    text-decoration: none;
+}
+.a-main-item:hover {
+    color: #ffffff;
+    padding: 10px;
+    text-decoration: none;
+    border-bottom: 1px solid #ffffff;
+}
+.div-bottom {
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-bottom: 2%;
+    width: 86%;
+    height: 6%;
+    border-top: 1px solid #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.h-bottom-item {
+
+}
+.a-bottom-item {
+    color: #ffffff;
+    text-decoration: none;
+}
+.a-bottom-item:hover {
+    color: #ffffff;
+    text-decoration: none;
+    border-bottom: 1px solid #ffffff;
+}

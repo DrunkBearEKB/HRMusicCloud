@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block style_sheet %}
+<link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/style_register.css') }}">
+{% endblock %}
+{% block content %}
+<div class="div-main-register" style="top: 10%;">
+    <h1>Registration</h1>
+    <form class="register-form" id="register-form" action="" method="post" enctype="multipart/form-data">
+        <input class="input-register" type="text" name="login"
+               placeholder="Login (at least 4 characters)" onmouseover="loginHover()"
+               onmouseout="loginUnHover()" required>
+        <input class="input-register" type="password" name="password"
+               placeholder="Password (at least 8 characters)" minlength="8"
+               oninput="passwordsCheck()" onmouseover="passwordHover()"
+               onmouseout="passwordUnHover()" required>
+        <input class="input-register-verify" type="password" name="password_verify"
+               placeholder="Verify Password" minlength="8"
+               oninput="passwordsCheck()" onmouseover="passwordVerifyHover()"
+               onmouseout="passwordVerifyUnHover()" required>
+        <input class="input-register" type="email" name="email"
+               placeholder="Email" required>
+<!--        <select class="select-register-country" name="country" required>-->
+<!--            <option class="option-register-country" value="Russia">Russian Federation</option>-->
+<!--            <option class="option-register-country" value="Garbage country">Other garbage countries</option>-->
+<!--        </select>-->
+        <div class="div-select-register">
+            <input class="input-country" name="" hidden>
+            <div class="div-select-head-register">Choose your country</div>
+            <ul class="ul-select-list" style="display: none;">
+                <li class="li-select-item">Russian Federation</li>
+                <li class="li-select-item">Other garbage countries</li>
+            </ul>
+        </div>
+        <input class="input-register" type="date" name="date"
+               placeholder="Date" required>
+        <input class="input-register-submit" id="submit-button" type="submit" value="Register" disabled>
+    </form>
+    <h2>
+        <a class="a-register-login" href="../login/">You have an account?</a>
+    </h2>
+</div>
+<script src="{{ url_for('static', filename='js/script_registration.js') }}"></script>
+{% endblock %}

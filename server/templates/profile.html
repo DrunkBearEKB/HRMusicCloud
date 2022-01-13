@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block style_sheet %}
+<link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/style_profile.css') }}">
+{% endblock %}
+{% block content %}
+<div class="div-main-profile" style="top: 10%;">
+    <h1 style="width: 100%; text-align: center;">Account</h1>
+    <h2 style="width: 100%; text-align: center;">Profile</h2>
+    <table style="width: 60%;">
+        <tr>
+            <td style="padding: 6%;">User login</td>
+            <td style="padding: 6%;">{{ login }}</td>
+        </tr>
+        <tr>
+            <td style="padding: 6%;">Email</td>
+            <td style="padding: 6%;">{{ email }}</td>
+        </tr>
+        <tr>
+            <td style="padding: 6%;">Date of birth</td>
+            <td style="padding: 6%;">{{ birth }}</td>
+        </tr>
+        <tr>
+            <td style="padding: 6%;">Country</td>
+            <td style="padding: 6%;">{{ country }}</td>
+        </tr>
+    </table>
+    <h2>Subscription</h2>
+
+</div>
+{% endblock %}

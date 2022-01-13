@@ -1,0 +1,435 @@
+body {
+    background-color: #000000;
+    font-family: Consolas, monaco, monospace;
+    color: #ffffff;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.div-top {
+    position: absolute;
+    left: 0%;
+    top: 0;
+    width: 100%;
+    height: 8%;
+    border: 1px solid #000000;
+    background-color: #181818;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.div-top-logo {
+    width: 15%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+.img-top-logo {
+    max-width: 70%;
+    max-height: 70%;
+    padding: 2%;
+}
+.p-top-logo {
+    padding: 2%;
+    font-size: 1.5vw;
+}
+.a-top-logo {
+    color: #ffffff;
+    text-decoration: none;
+}
+.a-top-logo:hover {
+    color: #ffffff;
+    text-decoration: none;
+    border-bottom: 1px solid #ffffff;
+}
+.div-top-buttons-left {
+    width: 7%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.img-top-button {
+    max-width: 40%;
+    max-height: 40%;
+}
+.div-top-search {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: left;
+}
+.input-search {
+    width: 50%;
+    height: 50%;
+    font-size: 100%;
+    outline: 0;
+    background: transparent;
+    color: #ffffff;
+    border-radius: 10px;
+    border: 3px solid #cccccc;
+}
+.div-top-buttons-right {
+    width: 48%;
+    height: 100%;
+}
+.div-left {
+    position: absolute;
+    left: 0;
+    top: 8%;
+    width: 15%;
+    height: 80%;
+    border: 1px solid #000000;
+    background-color: #181818;
+}
+.div-main {
+    position: absolute;
+    left: 15%;
+    top: 8%;
+    width: 85%;
+    height: 80%;
+    overflow-y:scroll;
+}
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+::-webkit-scrollbar-thumb {
+  background: #181818;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #444444;
+}
+.light-1 {
+    position: absolute;
+    right: 10%;
+    top: 20%;
+	height: 0;
+	width: 25%;
+	padding-top: 25%;
+	border-radius: 50%;
+	background: radial-gradient(circle, #181224, #000000);
+	transition: scale 5s linear;
+	box-shadow: 0px 0px 5% 0 #000000;
+	animation: rotate-1 20s infinite linear;
+}
+.light-2 {
+    position: absolute;
+    right: 20%;
+    top: 10%;
+	height: 0;
+	width: 23%;
+	padding-top: 23%;
+	border-radius: 50%;
+	background: radial-gradient(circle, #282234, #000000);
+	transition: scale 5s linear;
+	box-shadow: 0px 0px 5% 0 #000000;
+	animation: rotate-2 20s infinite linear;
+}
+.light-3 {
+    position: absolute;
+    right: 20%;
+    top: 20%;
+	height: 0;
+	width: 21%;
+	padding-top: 21%;
+	border-radius: 50%;
+	background: radial-gradient(circle, #383244, #000000);
+	transition: scale 5s linear;
+	box-shadow: 0px 0px 5% 0px #000000;
+	animation: rotate-3 20s infinite linear;
+}
+.div-main-search-result {
+    padding: 2% 1% 1% 2%;
+}
+.p-search-header {
+    font-size: 120%;
+    padding-left: 1%;
+}
+.div-main-search-artists {
+    padding: 2% 1% 1% 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+}
+.p-main-artists {
+    font-size: 120%;
+}
+.div-main-search-artist {
+    width: 17%;
+    padding: 1.5% 0.5% 0.5% 1%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid #000000;
+    border-radius: 10px;
+}
+.div-main-search-artist:hover {
+    background-color: #181818;
+}
+.img-search-artist {
+    min-width: 150px;
+    min-height: 150px;
+    max-width: 150px;
+    max-height: 150px;
+}
+.p-search-artist {
+    padding-left: 2%;
+}
+.div-main-search-albums {
+    padding: 2% 1% 1% 2%;
+}
+.p-main-albums {
+    font-size: 120%;
+}
+.div-main-search-album {
+    padding: 0.5% 0.5% 0.5% 1%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: left;
+    border: 1px solid #000000;
+    border-radius: 10px;
+}
+.div-main-search-album:hover {
+    background-color: #181818;
+    padding: 0.5% 0.5% 0.5% 1%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: left;
+    border: 1px solid #000000;
+    border-radius: 10px;
+}
+.img-search-album {
+    min-width: 40px;
+    min-height: 40px;
+    max-width: 40px;
+    max-height: 40px;
+}
+.p-search-album {
+    padding-left: 2%;
+}
+.div-main-search-playlists {
+    padding: 2% 1% 1% 2%;
+}
+.p-main-playlists {
+    font-size: 120%;
+}
+.div-main-search-playlist {
+    padding: 0.5% 0.5% 0.5% 1%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: left;
+    border: 1px solid #000000;
+    border-radius: 10px;
+}
+.div-main-search-playlist:hover {
+    background-color: #181818;
+    padding: 0.5% 0.5% 0.5% 1%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: left;
+    border: 1px solid #000000;
+    border-radius: 10px;
+}
+.img-search-playlist {
+    min-width: 40px;
+    min-height: 40px;
+    max-width: 40px;
+    max-height: 40px;
+}
+.p-search-playlist {
+    padding-left: 2%;
+}
+.div-main-search-tracks {
+    padding: 2% 1% 1% 2%;
+}
+.p-main-tracks {
+    font-size: 120%;
+}
+.div-main-search-track {
+    padding: 0.5% 0.5% 0.5% 1%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: left;
+    border: 1px solid #000000;
+    border-radius: 10px;
+}
+.div-main-track:hover {
+    background-color: #181818;
+    padding: 0.5% 0.5% 0.5% 1%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: left;
+    border: 1px solid #000000;
+    border-radius: 10px;
+}
+.img-search-track {
+    min-width: 40px;
+    min-height: 40px;
+    max-width: 40px;
+    max-height: 40px;
+}
+.p-search-track {
+    padding-left: 2%;
+}
+.div-main-artist {
+    width: 100%;
+}
+.div-main-artist-img {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
+.img-main-artist {
+    width: 100%;
+}
+.p-main-artist-name {
+    padding-left: 3%;
+    padding-top: 170px;
+    font: bold 70px Arial;
+}
+.div-main-artist-tracks {
+
+}
+.div-main-album {
+
+}
+.div-main-playlist {
+
+}
+.div-player {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 12%;
+    border: 1px solid #000000;
+    background-color: #181818;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.div-player-left {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.div-player-left-picture {
+    min-width: 65px;
+    min-height: 65px;
+    max-width: 65px;
+    max-height: 65px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.img-player-left-picture {
+    min-width: 65px;
+    min-height: 65px;
+    max-width: 65px;
+    max-height: 65px;
+}
+.div-player-left-info {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.p-player-info-title {
+    height: 75%;
+    align: left;
+    font-size: 15px;
+    margin-bottom: 5px;
+    paddint-top: 3%;
+    color: #ffffff;
+    text-decoration: none;
+}
+.p-player-info-title:hover {
+    cursor: pointer;
+}
+.p-player-info-artist {
+    height: 25%;
+    align: left;
+    font-size: 12px;
+    margin-top: 0;
+    paddint-bottom: 3%;
+    color: #cccccc;
+    text-decoration: none;
+}
+.p-player-info-artist:hover {
+    cursor: pointer;
+    color: #ffffff;
+}
+.div-player-middle {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.div-player-middle-buttons {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+.img-player {
+    max-width: 70%;
+    max-height: 70%;
+    padding: 2%;
+}
+.img-player-secondary {
+    max-width: 30%;
+    max-height: 30%;
+    padding: 2%;
+}
+.div-player-middle-scale {
+    width: 100%;
+    height: 30%;
+    padding-bottom: 10%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+.input-time {
+    width: 80%;
+    height: 15%;
+    -webkit-appearance: none !important;
+    background: #cccccc;
+}
+input-time::-webkit-slider-thumb {
+    -webkit-appearance: none !important;
+    background: #fe00ff;
+}
+.p-time {
+    width: 10%;
+    font-size: 10px;
+    text-align: center;
+}
+.div-player-right {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}

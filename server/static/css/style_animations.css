@@ -1,0 +1,24 @@
+@keyframes rotate-1 {
+	from {
+	    transform: rotate(0deg)  translate(10%);
+	}
+    to {
+        transform: rotate(360deg) translate(10%);
+    }
+}
+@keyframes rotate-2 {
+	from {
+	    transform: rotate(-60deg) translate(15%);
+	}
+    to {
+        transform: rotate(-420deg) translate(15%);
+    }
+}
+@keyframes rotate-3 {
+	from {
+	    transform: rotate(120deg) translate(15%);
+	}
+    to {
+        transform: rotate(480deg) translate(15%);
+    }
+}

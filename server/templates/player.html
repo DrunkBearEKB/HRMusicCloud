@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/style_player.css') }}">
+    <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/style_animations.css') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='images/logo.png') }}"/>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+
+<div class="div-left">
+
+</div>
+
+<div class="div-main" id="div-main">
+    <div class="light-1"></div>
+    <div class="light-2"></div>
+    <div class="light-3"></div>
+</div>
+
+<div class="div-top">
+    <div class="div-top-logo">
+        <img class="img-top-logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="">
+        <p class="p-top-logo">
+            <a class="a-top-logo" href="../">HRMusicCloud</a>
+        </p>
+    </div>
+    <div class="div-top-buttons-left">
+        <img class="img-top-button" id="img-button-back" src="{{ url_for('static', filename='images/back.png') }}" alt=""
+             onclick="menuButtonPreviousPageClick(this)"
+             onmouseover="menuButtonPreviousPageHover(this)" onmouseout="menuButtonPreviousPageUnHover(this)">
+        <img class="img-top-button" id="img-button-next" src="{{ url_for('static', filename='images/back_back.png') }}" alt=""
+             onclick="menuButtonNextPageClick(this)"
+             onmouseover="menuButtonNextPageHover(this)" onmouseout="menuButtonNextPageUnHover(this)">
+    </div>
+    <div class="div-top-search">
+        <input class="input-search" type="text" maxlength="20"
+               onkeyup="search(this.value);">
+    </div>
+    <div class="div-top-buttons-right">
+
+    </div>
+</div>
+
+<div class="div-player">
+    <audio id="audio-player" preload="auto" autoplay></audio>
+
+    <div class="div-player-left">
+        <div class="div-player-left-picture">
+             <img class="img-player-left-picture" id="img-player-left-picture" src="{{ url_for('static', filename='images/logo.png') }}" alt="">
+        </div>
+        <div class="div-player-left-info" hidden>
+            <p class="p-player-info-title" id="p-player-info-title"></p>
+            <p class="p-player-info-artist" id="p-player-info-artist"></p>
+        </div>
+    </div>
+
+    <div class="div-player-middle">
+        <div class="div-player-middle-buttons">
+            <img class="img-player-secondary" src="{{ url_for('static', filename='images/random.png') }}" alt=""
+                 onclick="playerButtonRandomClick(this)"
+                 onmouseover="playerButtonRandomHover(this)" onmouseout="playerButtonRandomUnHover(this)">
+            <img class="img-player-secondary" src="{{ url_for('static', filename='images/previous.png') }}" alt=""
+                 onclick="playerButtonPreviousClick(this)"
+                 onmouseover="playerButtonPreviousHover(this)"  onmouseout="playerButtonPreviousUnHover(this)">
+            <img class="img-player" id="img-player" src="{{ url_for('static', filename='images/play.png') }}" alt=""
+                 onclick="playerButtonPlayClick(this)"
+                 onmouseover="playerButtonPlayHover(this)"  onmouseout="playerButtonPlayUnHover(this)">
+            <img class="img-player-secondary" src="{{ url_for('static', filename='images/next.png') }}" alt=""
+                 onclick="playerButtonNextClick(this)"
+                 onmouseover="playerButtonNextHover(this)"  onmouseout="playerButtonNextUnHover(this)">
+            <img class="img-player-secondary" src="{{ url_for('static', filename='images/repeat.png') }}" alt=""
+                 onclick="playerButtonRepeatClick(this)"
+                 onmouseover="playerButtonRepeatHover(this)" onmouseout="playerButtonRepeatUnHover(this)">
+        </div>
+        <div class="div-player-middle-scale">
+            <p class="p-time" id="p-time-current"></p>
+            <input class="input-time" type="range" min="0" max="100" value="0" id="input-time" oninput="changeTime()">
+            <p class="p-time" id="p-duration"></p>
+        </div>
+    </div>
+
+    <div class="div-player-right">
+        <p class="p-player-waste">
+            <input class="input-volume" type="range" min="0" max="100" value="50" id="input-volume" oninput="changeVolume()">
+        </p>
+    </div>
+</div>
+<script src="{{ url_for('static', filename='js/script_player.js') }}"></script>
+</body>
+</html>

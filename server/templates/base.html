@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/style_animations.css') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='images/logo.png') }}"/>
+    {% block style_sheet %}
+    {% endblock %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+<div class="div-header">
+    <div class="div-header-left">
+        <img class="img-header-logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="">
+        <p class="p-header-item" style="font-size: 30px;">
+            <a class="a-header-item" href="/">HRMusicCloud</a>
+        </p>
+    </div>
+    <div class="div-header-right">
+        <p class="p-header-item">
+            <a class="a-header-item" href="/about/">About</a>
+        </p>
+        <p class="p-header-item">
+            {% if logged %}
+                <a class="a-header-item" href="/profile/{{ user_login }}">{{ user_login }}</a>
+            {% else %}
+                <a class="a-header-item" href="/login/">Login</a>
+            {% endif %}
+        </p>
+    </div>
+</div>
+<div class="div-main">
+<!--    <div class="light-1"></div>-->
+<!--    <div class="light-2"></div>-->
+<!--    <div class="light-3"></div>-->
+
+    {% block content %}
+    {% endblock %}
+</div>
+<div class="div-bottom">
+    <h3 class="h-bottom-item">© 2021 All rights reserved</h3>
+    <h4 class="h-bottom-item">
+        <a class="a-bottom-item" href="/api-reference/">For Developers</a>
+        |
+        <a class="a-bottom-item" href="/privacy-policy/">Privacy Policy</a>
+    </h4>
+</div>
+</body>
+</html>

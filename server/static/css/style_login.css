@@ -1,0 +1,78 @@
+.div-main-login {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.h-login-sec {
+    width: 100%;
+    color: #dddddd;
+    text-align: left;
+}
+.h-email-part {
+    color: #ffffff;
+}
+.h-login-exc {
+    width: 100%;
+    color: #ff0000;
+    text-align: center;
+}
+.login-form {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.input-login {
+    width: 100%;
+    padding: 5%;
+    margin: 3%;
+    font-size: 150%;
+    outline: 0;
+    background: transparent;
+    color: #ffffff;
+    border-radius: 20px;
+    border: 3px solid #cccccc;
+}
+.input-login:focus {
+    width: 100%;
+    padding: 5%;
+    margin: 3%;
+    font-size: 150%;
+    outline: 0;
+    background: transparent;
+    color: #ffffff;
+    border-radius: 20px;
+    border: 3px solid #ffffff;
+}
+.input-login-submit {
+    width: 60%;
+    padding: 5%;
+    margin: 3%;
+    background: transparent;
+    color: #cccccc;
+    font-size: 125%;
+    border-radius: 20px;
+    border: 3px solid #cccccc;
+}
+.input-login-submit:hover {
+    width: 60%;
+    padding: 5%;
+    margin: 3%;
+    background: transparent;
+    color: #ffffff;
+    font-size: 125%;
+    border-radius: 20px;
+    border: 3px solid #ffffff;
+}
+.a-login-register {
+    color: #ffffff;
+    text-decoration: none;
+}
+.a-login-register:hover {
+    color: #ffffff;
+    text-decoration: none;
+    border-bottom: 1px solid #ffffff;
+}
